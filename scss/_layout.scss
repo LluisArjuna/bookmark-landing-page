@@ -1,0 +1,372 @@
+/* * * * * * * * * * * * * * * * * * * * *
+    * B A S E S
+* * * * * * * * * * * * * * * * * * * * */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-main;
+    background-color: $blanco;
+    padding: 0 10%;
+}
+
+h3 {
+    text-align: center;
+    font-size: 38px;
+}
+
+a {
+    text-decoration: none;
+    color: $gris-fuente;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+    * NAV FOOTER
+* * * * * * * * * * * * * * * * * * * * */
+.navbar {
+    @include flex-center(row, space-between);
+    width: 100%;
+    padding: 30px 0 70px;
+
+    #menu-hamburguesa {
+      display: none;
+    }
+
+    .hamburguesa {
+        z-index: 20;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    background: rgba(35, 41, 72, 0.9);
+    @include flex-center(column, top);
+    text-align: center;
+
+    .nav-links {
+        width: 80%;
+        list-style: none;
+        @include flex-center(column, null, null);
+
+        li {
+            border-top: 1px solid $gris-sombra;
+            padding: 20px 0;
+
+            a {
+                color: $blanco;
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    .nav-redes {
+        width: 80%;
+        padding-top: 80px;
+        list-style-type: none;
+        display: flex;
+        @include flex-center(row);
+
+        li {
+            padding: 0 20px;
+        }
+    }
+}
+
+#menu-hamburguesa:checked ~ .menu {
+    right: 0;
+}
+
+footer {
+    background-color: $color-terciario;
+    @include flex-center(column);
+    padding: 40px 0;
+    margin: 0 -12.5%;
+
+    .footer-menu{
+        height: 100%;
+        padding: 20px 0;
+        @include flex-center(column, null, center);
+        list-style-type: none;
+    }
+
+    .footer-social-networks{
+        width: 20%;
+        @include flex-center(row, space-between);
+    }
+
+    .footer-li{
+        height: 100%;
+        @include flex-center(row);
+        padding: 16px 0;
+        list-style-type: none;
+        letter-spacing: 2px;
+
+        a{
+            text-decoration: none;
+            color: $blanco;
+        }
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+    * H E R O
+* * * * * * * * * * * * * * * * * * * * */
+.hero {
+    @include flex-center(column);
+    padding-bottom: 130px;
+
+
+    .img-container{
+       width: 100%; 
+
+       .hero-shape {
+            position: absolute;
+            top: 25%;
+            right: 0;
+            width: 300px;    
+            height: 170px;   
+            background: $color-principal; 
+            border-top-left-radius: 120px;  
+            border-bottom-left-radius: 120px; 
+            z-index: -1; 
+        }
+       
+        img {
+            width: 100%;
+        }
+    }
+    
+
+    
+
+    .buttons {
+        width: 100%;
+        @include flex-center(row, space-between);
+        white-space: nowrap;
+    }
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.gray-text {
+    font-size: 16px;
+    text-align: center;
+    padding: 2rem 0;
+    color: $gris-fuente;
+    line-height: 24px;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+    * F E A T U R E S
+* * * * * * * * * * * * * * * * * * * * */
+.sec-information {
+    @include flex-center(column, null, center);
+    width: 100%;
+    padding-bottom: 80px;
+
+    input {
+        display: none;
+    }
+
+    .features{
+        @include flex-center(column);
+        width: 100%;
+        
+        .feature-title {
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid $gris-sombra;
+            color: $gris-fuente;
+            font-size: 18px;
+        }
+
+        .first-feature{
+            border-top: 1px solid $gris-sombra;
+        }
+    }   
+    
+    .feature-shape{
+        position: absolute;
+        left: 0;
+        margin-top: 30%;
+        width: 300px;    
+        height: 170px;   
+        background: $color-principal; 
+        border-top-right-radius: 120px;  
+        border-bottom-right-radius: 120px; 
+        z-index: -1; 
+    }
+}
+
+
+
+.feature {
+    margin-top: 40px;
+    display: none;
+
+    img {
+        width: 100%;
+    }
+
+    .feature-content {
+        padding-top: 40px;
+
+        button {
+            display: none;
+        }
+    }
+}
+
+#tab1:checked ~ .features-list #feature-1,
+#tab2:checked ~ .features-list #feature-2,
+#tab3:checked ~ .features-list #feature-3 {
+    display: block; // <-- key fix
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+    * E X T E N S I O N S
+* * * * * * * * * * * * * * * * * * * * */
+.extension {
+    @include flex-center(column);
+    box-shadow: 0 4px 10px $gris-sombra;
+    border-radius: 16px;
+    margin-bottom: 40px;
+
+    .logo {
+        width: 33%;
+        padding: 40px 0;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+}
+
+.extension-button {
+    width: 84%;
+    @include button($color-principal, $blanco, $gris-sombra);
+    margin: 20px 0;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+    * Frequently Asked Questions
+* * * * * * * * * * * * * * * * * * * * */
+.accordions {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.accordion {
+    border-bottom: 1px solid $gris-sombra;
+    padding: 20px 0;
+
+    summary::marker {
+        content: "";
+    }
+
+    summary {
+        position: relative;
+    }
+
+    summary::before {
+        content: url("../starter-code/images/icon-arrow.svg");
+        position: absolute;
+        inset-inline-end: 0;
+
+    }
+
+    details[open] summary::before {
+        transform: translateY(-50%) rotate(180deg);
+        background-color: $color-secundario;
+        mask-image: url("../starter-code/images/icon-arrow.svg");
+        mask-repeat: no-repeat; 
+    }
+}
+
+.first-accordion{
+    border-top: 1px solid $gris-sombra;
+}
+
+.info-text {
+    padding: 2rem 0;
+    color: $gris-fuente;
+    line-height: 30px;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+    * F O R M
+* * * * * * * * * * * * * * * * * * * * */
+.sec-form {
+    background-color: $color-principal;
+    color: $blanco;
+    @include flex-center(column);
+    margin: 0 -12.5%;
+    padding: 10%;
+    text-align: center;
+
+    p {
+        font-size: 14px;
+        padding: 60px 0 10px;
+        letter-spacing: 6px;
+    }
+}
+
+.form {
+    @include flex-center(column, null, null);
+    width: 100%;   
+    
+    .form-input-container{
+            width:100%;
+            @include flex-center(column, null, null);
+        }
+
+    input {
+        width: auto;
+        padding: 16px 8px;
+        margin-top: 16px;
+        border: 1px solid $gris-sombra;
+        border-radius: 6px;
+    }
+
+    .icon-error {
+        width: 18px;
+        position:absolute;
+        right: 14%;
+        padding-top: 30px;
+        display: none;
+    }
+
+    .error-message {
+        display: none;
+        background-color: $color-secundario;
+        color: $blanco;
+        font-size: 12px;
+        padding: 8px;
+        border-radius: 0  0 10px 10px;
+    }
+
+    .form-button{
+        @include button($color-secundario, $blanco, $gris-fuente);
+        margin:16px 0 40px;
+    }
+}
+

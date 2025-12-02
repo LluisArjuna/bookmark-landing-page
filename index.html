@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./scss/main.css">
     <title>Document</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
                     <li><a href="#FEATURES">FEATURES</a></li>
                     <li><a href="#PRICING">PRICING</a></li>
                     <li><a href="#CONTACT">CONTACT</a></li>
-                    <li class="last-feature"><a href="#LOGIN">LOGIN</a></li>
+                    <li class="last-feature "><a class="desktop-login" href="#LOGIN">LOGIN</a></li>
                 </ul>
                 <ul class="nav-redes">
                     <li><a href="#facebook"><img src="./starter-code/images/icon-facebook.svg" alt="logo de facebook"></a></li>
@@ -27,7 +27,11 @@
         </nav>
 
         <div class="hero">
-            <img src="./starter-code/images/illustration-hero.svg" alt="imagen hero de twitter">
+            <div class="img-container">
+                <div class="hero-shape"></div>
+                <img src="./starter-code/images/illustration-hero.svg" alt="imagen hero de twitter">
+            </div>
+            
             <div class="content-hero">
                 <h2>A Simple Bookmark Manager</h2>
                 <p class="gray-text">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
@@ -43,22 +47,26 @@
     <main>
         <section class="sec-information">
             <h3>Features</h3>
-            <p class="gray-text">Our aim is to make it quick and easy for you to acces your favourite websites. Your bookmarks sync between your devices so you can acces them on the go.</p>
+            <p class="gray-text desktop-text">Our aim is to make it quick and easy for you to acces your favourite websites. Your bookmarks sync between your devices so you can acces them on the go.</p>
+
             <input type="radio" id="tab1" name="tabs" checked>
-            <label class="feature-title" for="tab1">Simple Bookmarking</label>
-
             <input type="radio" id="tab2" name="tabs">
-            <label class="feature-title" for="tab2">Speedy Searching</label>
-
             <input type="radio" id="tab3" name="tabs">
-            <label class="feature-title" for="tab3" class="last-feature">Easy Sharing</label>
+
+            <div class="features">
+                <label class="feature-title first-feature" for="tab1">Simple Bookmarking</label>
+                <label class="feature-title" for="tab2">Speedy Searching</label>
+                <label class="feature-title" for="tab3">Easy Sharing</label>
+            </div>
 
             <div class="features-list">
+                <div class="feature-shape"></div>
                 <article class="feature" id="feature-1">
                     <img src="./starter-code/images/illustration-features-tab-1.svg" alt="imagen descriptiva de Bookmark in one clik">
                     <div class="feature-content">
                         <h3>Bookmark in one clik</h3>
                         <p class="gray-text">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                        <button class="button blue-button"><b>More Info</b></button>
                     </div>
                 </article>
                 <article class="feature" id="feature-2">
@@ -66,6 +74,7 @@
                     <div class="feature-content">
                         <h3>Intelligent search</h3>
                         <p class="gray-text">Our powerfull search Feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+                        <button class="button blue-button"><b>More Info</b></button>
                     </div>
                 </article>
                 <article class="feature" id="feature-3">
@@ -73,6 +82,7 @@
                     <div class="feature-content">
                         <h3>Share your bookmarks</h3>
                         <p class="gray-text">Easyly share your bookmarks and collections with others. Create a shareable link that you can send at the clik of a button.</p>
+                        <button class="button blue-button"><b>More Info</b></button>
                     </div>
                 </article>
             </div>
@@ -80,8 +90,8 @@
 
         <section class="sec-information">
             <h3>Download the extension</h3>
-            <p class="gray-text">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
-            <div>
+            <p class="gray-text desktop-text">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
+            <div class="extensions">
                 <article class="extension">
                     <img class="logo" src="./starter-code/images/logo-chrome.svg" alt="logo de chrome">
                     <h4>Add to Chrome</h4>
@@ -89,14 +99,14 @@
                     <img class="dots-line" src="./starter-code/images/bg-dots.svg" alt="linea de puntos diferencial">
                     <button class="extension-button blue-button">Add & Install Extension</button>
                 </article>
-                <article class="extension">
+                <article class="extension ex-2">
                     <img class="logo" src="./starter-code/images/logo-firefox.svg" alt="logo de Firefox">
                     <h4>Add to Firefox</h4>
                     <p class="gray-text">Minimum version 55</p>
                     <img class="dots-line" src="./starter-code/images/bg-dots.svg" alt="linea de puntos diferencial">
                     <button class="extension-button blue-button" >Add & Install Extension</button>
                 </article>
-                <article class="extension">
+                <article class="extension ex-3">
                     <img class="logo" src="./starter-code/images/logo-opera.svg" alt="logo de Opera">
                     <h4>Add to Opera</h4>
                     <p class="gray-text">Minimum version 46</p>
@@ -108,10 +118,10 @@
 
         <section class="sec-information">
             <h3>Frequently Asked Questions</h3>
-            <p class="gray-text">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
+            <p class="gray-text desktop-text">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
             <div class="accordions">
-                <div class="accordion">
-                    <details class="">
+                <div class="accordion first-accordion">
+                    <details>
                         <summary class="acc-label">What is Bookmark?</summary>
                         <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis natus vel delectus illo ex, porro hic placeat molestiae, explicabo esse facilis similique quibusdam tempore possimus cumque velit temporibus nemo officiis!</p>
                     </details>
@@ -142,20 +152,25 @@
             <p>35,000 already Joined</p>
             <h3>Stay up-to-date with what we're doing</h3>
             <div class="form">
-                <input  type="text" id="email" name="email" placeholder="Enter your email adress" required>
-                <img src="./starter-code/images/icon-error.svg" alt="elemento de error" id="icon" class="icon-error">
-                <span id="error" class="error-message">Whoops, make sure it's an email</span>
+                <div class="form-input-container">
+                    <input  type="text" id="email" name="email" placeholder="Enter your email adress" required>
+                    <img src="./starter-code/images/icon-error.svg" alt="elemento de error" id="icon" class="icon-error">
+                    <span id="error" class="error-message">Whoops, make sure it's an email</span>
+                </div>
                 <button class="form-button" onclick="validarEmail()">Contact Us</button>
             </div>
         </section>
     </main>
     <footer>
-        <img src="./starter-code/images/logo-bookmark.svg" alt="Logo de Bookmark">
-        <ul class="footer-menu">
-            <li class="footer-li"><a href="#FEATURES">FEATURES</a></li>
-            <li class="footer-li"><a href="#PRICING">PRICING</a></li>
-            <li class="footer-li"><a href="#CONTACT">CONTACT</a></li>
-        </ul>
+        <div class="logo-menu">
+            <img src="./starter-code/images/logo-bookmark.svg" alt="Logo de Bookmark">
+            <ul class="footer-menu">
+                <li class="footer-li"><a href="#FEATURES">FEATURES</a></li>
+                <li class="footer-li"><a href="#PRICING">PRICING</a></li>
+                <li class="footer-li"><a href="#CONTACT">CONTACT</a></li>
+            </ul>
+        </div>
+    
         <ul class="footer-social-networks">
             <li class="footer-li"><a href="#facebook"><img src="./starter-code/images/icon-facebook.svg" alt="logo de facebook"></a></li>
             <li class="footer-li"><a href="#twitter"><img src="./starter-code/images/icon-twitter.svg" alt="logo de Twitter"></a></li>
