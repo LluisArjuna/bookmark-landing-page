@@ -1,0 +1,12 @@
+.button {
+    @include button($blanco, $gris-fuente, $gris-sombra);
+    width: 48%;
+}
+
+.blue-button {
+    @include button($color-principal, $blanco, $gris-sombra);
+}
+
+.red-button {
+    @include button($color-secundario, $blanco, $gris-sombra);
+}

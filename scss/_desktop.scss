@@ -1,0 +1,299 @@
+@media only screen and (min-width: 1024px){
+    /* * * * * * * * * * * * * * * * * * * * *
+        * B A S E S
+    * * * * * * * * * * * * * * * * * * * * */
+    body {
+        padding: 0 13%;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 28px;
+    }
+    
+    /* * * * * * * * * * * * * * * * * * * * *
+        * NAV FOOTER
+    * * * * * * * * * * * * * * * * * * * * */
+    .navbar {
+        @include flex-center(row, space-between);
+        width: 100%;
+        padding: 30px 0 70px;
+
+        #menu-hamburguesa {
+        display: none;
+        }
+
+        .hamburguesa {
+            display: none;
+        }
+    }
+
+    .menu {
+        position: relative;
+        top: 0;
+        right:0;
+        width: 60%;
+        height: auto;
+        padding-top: 0;
+        background: none;
+        
+        @include flex-center(row);
+
+        .nav-links {
+            width: 100%;
+            @include flex-center(row, space-between);
+
+            li {
+                border-top: none;
+                padding: 20px 0;
+
+                a {
+                    font-size: 16px;
+                    color: $negro;
+                }
+            }
+
+            .desktop-login{
+                padding: 20px 40px;
+                @include button($color-secundario, $blanco, $gris-sombra);
+            }
+        }
+
+        .nav-redes {
+            
+            display: none;
+        }
+    }
+
+
+    footer {
+        background-color: $color-terciario;
+        @include flex-center(row, space-between);
+        padding: 40px 15%;
+        margin: 0 -17.55%;
+
+        .logo-menu{
+            width: 60%;
+            @include flex-center(row, space-between);
+            margin-right: 20px;
+        }
+
+        .footer-menu{
+            width: 100%;
+            @include flex-center(row, space-between);
+        }
+
+        .footer-social-networks{
+            width: 100px;
+            @include flex-center(row, space-between);
+        }
+    }
+
+
+    /* * * * * * * * * * * * * * * * * * * * *
+        * H E R O
+    * * * * * * * * * * * * * * * * * * * * */
+    .hero {
+        @include flex-center(row);
+        padding-bottom: 130px;
+
+        .img-container{
+            width: 50%;
+            order: 2;
+
+            .hero-shape {
+                top: 32%;
+                width: 40%;    
+                height: 30%;   
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .content-hero{
+            width: 50%;
+            @include flex-center(column, flex-start, flex-start);
+            
+        }
+        .buttons {
+            width: auto;
+            @include flex-center(row, null);
+            white-space: nowrap;
+        }
+    }
+
+    h2 {
+        font-size: 44px;
+        text-align: left;
+    }
+
+    .gray-text {
+        font-size: 18px;
+        text-align: left;
+        padding: 2rem 0;
+        color: $gris-fuente;
+        line-height: 30px;
+    }
+
+
+    /* * * * * * * * * * * * * * * * * * * * *
+        * F E A T U R E S
+    * * * * * * * * * * * * * * * * * * * * */
+    .sec-information {
+        .desktop-text{
+            width: 60%;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .features{
+            width: 70%;
+            @include flex-center(row);
+             
+            .feature-title {
+                width: 33%;
+            }
+             
+            .first-feature{
+                border-top: none;
+            }
+        }
+        .feature-shape{
+            position: absolute;
+            right: 0;
+            margin-top: 12%;
+            width: 40%;    
+            height: 35%;   
+            background: $color-principal; 
+            border-top-right-radius: 200px;  
+            border-bottom-right-radius: 200px; 
+            z-index: -1; 
+    }
+    }
+
+    
+
+    .feature {
+        padding-top: 60px;
+
+        img{
+            width: 50%;
+            height: auto;
+            display: block;
+        }
+
+        .feature-content {
+            padding: 40px 0 0 40px;
+        }
+
+        h3{
+            text-align: left;
+        }
+    }
+
+    #tab1:checked ~ .features-list #feature-1,
+    #tab2:checked ~ .features-list #feature-2,
+    #tab3:checked ~ .features-list #feature-3 {
+        display: flex;
+    }
+
+
+    /* * * * * * * * * * * * * * * * * * * * *
+        * E X T E N S I O N S
+    * * * * * * * * * * * * * * * * * * * * */
+    .extensions{
+        @include flex-center(row);
+    }
+
+    .extension {
+        margin: 0 20px;
+    }
+
+    .ex-2{
+        margin-top: 100px;
+    }
+
+    .ex-3{
+        margin-top: 200px;
+    }
+
+    /* * * * * * * * * * * * * * * * * * * * *
+        * Frequently Asked Questions
+    * * * * * * * * * * * * * * * * * * * * */
+    .accordions {
+        width: 50%;
+    }
+
+    .accordion {
+        border-bottom: 1px solid $gris-sombra;
+        padding: 20px 0;
+
+        summary {
+            font-size: 20px;
+            position: relative;
+        }
+    }
+
+    .info-text {
+        padding: 2rem 0;
+        color: $gris-fuente;
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+
+    /* * * * * * * * * * * * * * * * * * * * *
+        * F O R M
+    * * * * * * * * * * * * * * * * * * * * */
+    .sec-form {
+        margin: 0 -17.55%;
+        padding: 80px 45% 80px 45%;
+        
+
+        p {
+            padding: 0 0 10px;
+        }
+
+        h3{
+            font-size: 38px;
+            padding: 20px 0
+        }
+    }
+
+    .form {
+        @include flex-center(row);
+
+        .form-input-container{
+            width:100%;
+            @include flex-center(column, null, null);
+            margin-right: 20px;
+        }
+
+        input {
+            width: auto;
+            padding: 16px 8px;
+        }
+
+        .icon-error {
+            right: 44%;
+        }
+
+        .error-message {
+            display: none;
+            background-color: $color-secundario;
+            color: $blanco;
+            font-size: 12px;
+            padding: 8px;
+            border-radius: 0  0 10px 10px;
+        }
+
+        .form-button{
+            justify-self: end;
+            width: auto;
+            margin:16px 0 0;
+            white-space: nowrap;
+        }
+    }
+}
