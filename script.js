@@ -7,12 +7,19 @@ function validarEmail() {
 
     if (!emailRegex.test(emailInput.value)) {
         emailInput.style.border = "3px solid #FA5959";
-        emailInput.style.borderRadius = "6px 6px 0 0";
-        errorMessage.style.display = "block";
-        iconError.style.display = "block";
+        
+        errorMessage.classList.add("inline");
+        errorMessage.classList.remove("hidden");
+
+        iconError.classList.add("inline");
+        iconError.classList.remove("hidden");
     } else {
-        emailInput.classList.remove("error");
-        errorMessage.style.display = "none";
-        alert("Email válido!");
+        emailInput.style.border = "0 solid #FA5959";
+
+        errorMessage.classList.add("hidden");
+        errorMessage.classList.remove("inline");
+
+        iconError.classList.add("hidden");
+        iconError.classList.remove("inline");
     }
 }
