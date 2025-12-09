@@ -1,8 +1,10 @@
 Descripció - Sprint 1. Maquetació I
 
-Aquest projecte consisteix en el desenvolupament d’una landing page responsiva basada en un disseny preestablert. L’objectiu de l’exercici és practicar estructuració HTML, estilització amb CSS/SCSS i afegir interactivitat amb JavaScript. La pàgina inclou un menú responsive, seccions informatives, funcionalitats interactives i un formulari amb validació bàsica.
+Aquest projecte consisteix en el desenvolupament d’una landing page responsiva basada en un disseny preestablert. L’objectiu de l’exercici és practicar estructuració HTML, estilització amb CSS/SCSS i posteriorment amb Tailwind. Afegir interactivitat amb JavaScript. La pàgina inclou un menú responsive, seccions informatives, funcionalitats interactives i un formulari amb validació bàsica.
 
 💻 Tecnologies Utilitzades
+
+Git
 
 HTML5
 
@@ -10,9 +12,11 @@ CSS3
 
 SCSS
 
-JavaScript (ES6)
+JavaScript 
 
-Git
+Tailwind CSS  
+
+
 
 📋 Requisits
 
@@ -21,6 +25,7 @@ Navegador web modern (Chrome, Firefox, Safari…)
 Node.js i Sass per compilar SCSS
 
 Git (per clonar el repositori)
+
 
 🛠️ Instal·lació
 
@@ -37,6 +42,13 @@ cd bookmark-landing-page
 Compila els arxius SCSS:
 
 sass scss/style.scss style.css
+
+
+Instal·la Tailwind CSS i les eines necessàries:
+
+npm install
+npm install tailwindcss @tailwindcss/cli
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 
 
 ▶️ Execució
