@@ -54,13 +54,11 @@
             }
 
             .desktop-login{
-                padding: 20px 40px;
-                @include button($color-secundario, $blanco, $gris-sombra);
+                color: $blanco;
             }
         }
 
         .nav-redes {
-            
             display: none;
         }
     }
@@ -294,6 +292,11 @@
             width: auto;
             margin:16px 0 0;
             white-space: nowrap;
+            box-shadow: none;
+        }
+        .form-button:hover{
+            @include button($blanco, $color-secundario, none);
+            border: 2px solid $color-secundario;
         }
     }
 }

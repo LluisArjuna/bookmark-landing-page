@@ -65,6 +65,9 @@ a {
                 font-size: 20px;
                 letter-spacing: 2px;
             }
+            a:hover{
+                color: $color-secundario;
+            }
         }
     }
 
@@ -96,6 +99,10 @@ footer {
         padding: 20px 0;
         @include flex-center(column, null, center);
         list-style-type: none;
+
+        a:hover{
+            color: $color-secundario;
+        }
     }
 
     .footer-social-networks{
@@ -146,9 +153,6 @@ footer {
         }
     }
     
-
-    
-
     .buttons {
         width: 100%;
         @include flex-center(row, space-between);
@@ -195,6 +199,10 @@ h2 {
             font-size: 18px;
         }
 
+        .feature-title:hover{
+            color: $color-secundario;
+        }
+
         .first-feature{
             border-top: 1px solid $gris-sombra;
         }
@@ -238,6 +246,12 @@ h2 {
     display: block; // <-- key fix
 }
 
+#tab1:checked ~ .features #feature-title-1,
+#tab2:checked ~ .features #feature-title-2,
+#tab3:checked ~ .features #feature-title-3 {
+    color: $negro;
+    border-bottom: 4px solid $color-secundario
+}
 
 
 /* * * * * * * * * * * * * * * * * * * * *
@@ -284,6 +298,10 @@ h2 {
 
     summary {
         position: relative;
+    }
+
+    summary:hover{
+        color: $color-secundario;
     }
 
     summary::before {
@@ -367,6 +385,11 @@ h2 {
     .form-button{
         @include button($color-secundario, $blanco, $gris-fuente);
         margin:16px 0 40px;
+    }
+
+    .form-button:hover{
+        @include button($blanco, $color-secundario, none);
+        border: 2px solid $color-secundario;
     }
 }
 

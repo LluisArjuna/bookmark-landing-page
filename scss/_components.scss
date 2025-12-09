@@ -3,10 +3,24 @@
     width: 48%;
 }
 
+.button:hover{
+    border: 2px solid $gris-fuente;
+}
+
 .blue-button {
     @include button($color-principal, $blanco, $gris-sombra);
 }
 
+.blue-button:hover{
+    @include button($blanco, $color-principal, $gris-sombra);
+    border: 2px solid $color-principal;
+}
+
 .red-button {
-    @include button($color-secundario, $blanco, $gris-sombra);
+    @include button($color-secundario, $blanco, none);
+}
+
+.red-button:hover{
+    @include button($blanco, $color-secundario, none);
+    border: 2px solid $color-secundario;
 }
