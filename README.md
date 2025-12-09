@@ -10,12 +10,11 @@ HTML5
 
 CSS3
 
-SCSS
+SCSS (branca SASS)
 
 JavaScript 
 
-Tailwind CSS  
-
+Tailwind CSS (branca Tailwind)
 
 
 📋 Requisits
@@ -25,6 +24,15 @@ Navegador web modern (Chrome, Firefox, Safari…)
 Node.js i Sass per compilar SCSS
 
 Git (per clonar el repositori)
+
+
+🌿 Branques del projecte
+
+#Branca - feature/vanilla-implementation (Base sense frameworks).
+
+#Branca - feature/SASS-implementation (Variables, mixins, components, modularizació i CSS optimitzat).
+
+#Branca - feature/tailwind-implementation (Diseny responsiu, clases i components predefinits).
 
 
 🛠️ Instal·lació
@@ -63,10 +71,68 @@ Opcionalment, utilitza un servidor local:
 npx live-server
 
 
-🌐 Desplegament
+📂 Estructura de carpetes
 
-Prepara els arxius finals (HTML, CSS, JS i assets).
+feature/vanilla-implementation:
 
-Puja el projecte a un servidor d’allotjament estàtic (Netlify, Vercel, GitHub Pages…).
+bookmark-landing-page/
+│
+├── index.html
+|
+├── style.css
+│
+├── script.js
+│
+├── images/
+│
+├── designs/
+│   └── (mockups y recursos del diseño)
+└── README.md
 
-Assegura’t que l’arxiu d’entrada sigui index.html.
+feature/SASS-implementation
+
+bookmark-landing-page/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── scss/
+│   ├── base/
+│   ├── components/
+│   ├── layout/
+│   └── style.scss
+│
+├── images/
+│
+├── designs/
+│   └── (mockups y recursos del diseño)
+│
+├── index.html
+└── README.md
+
+feature/tailwind-implementatio
+
+bookmark-landing-page/
+│
+├── src/
+│   └── input.css      # Archivo donde se importan @tailwind base/components/utilities
+│
+├── dist/
+│   └── output.css     # CSS generado por Tailwind
+│
+├── js/
+│   └── script.js
+│
+├── images/
+│
+├── designs/
+│
+├── index.html
+│
+├── tailwind.config.js
+├── postcss.config.js
+├── package.json
+└── README.md
